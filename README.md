@@ -62,6 +62,5 @@ DATABASES = {
 * python manage.py runserver
 
 # Comandos para realizar la migración
-* ## Nota: Esto se debe hacer una vez se esté dentro del ambiente virtual.
 * python manage.py makemigrations hospitalApp
 * python manage.py migrate 
