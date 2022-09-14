@@ -9,7 +9,7 @@
 * pip install djangorestframework
 
 # Creación de proyecto
-* django-admin startproject projectName
+* django-admin startproject projectName .
 ### Nota: donde dice projectName lo cambiamos por el nombre de nuestro proyecto
 
 # Modificando el settings.py
@@ -20,3 +20,8 @@
 
 # Ejecutamos la aplicación
 * python manage.py runserver
+
+# Comandos para realizar la migración
+* ## Nota: Esto se debe hacer una vez se esté dentro del ambiente virtual.
+* python manage.py makemigrations hospitalApp
+* python manage.py migrate 
