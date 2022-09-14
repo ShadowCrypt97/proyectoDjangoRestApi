@@ -21,6 +21,7 @@
 # Modificando el settings.py
 * Nos dirigimos a la carpeta del proyecto en VSC y añadimos al final en el arreglo que se llama INSTALLED_APPS la llave 'rest_framework'
 * ## añadimos la siguiente configuración del rest framework:
+~~~
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
     'rest_framework.permissions.AllowAny',
@@ -29,8 +30,9 @@ REST_FRAMEWORK = {
     'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }
-
+~~~
 * ## Creamos la siguiente variable SimpleJWT para configurar la autenticación por JWT:
+~~~
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
@@ -41,10 +43,12 @@ SIMPLE_JWT = {
     'USER_ID_FIELD': 'id',
     'USER_ID_CLAIM': 'user_id',
 } 
+~~~
 * ### nota: para mayor información sobre simpleJWT ver la documentación:
 https://django-rest-framework-simplejwt.readthedocs.io/en/latest/settings.html.
 
 * ## Añadimos la configuración de la base de datos:
+~~~
 DATABASES = {
     'default': {
     'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -55,6 +59,7 @@ DATABASES = {
     'PORT': '5432',
     }
 }
+~~~
 # Creación de aplicación
 * django-admin startapp hospitalApp
 
