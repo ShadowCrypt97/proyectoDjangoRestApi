@@ -99,22 +99,14 @@ WSGI_APPLICATION = 'syntax_hospital.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    #'default': {
-    #    'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    #    'NAME': 'da9rs7av2ekq25',
-    #    'USER': 'qnmupxpdfcorto',
-    #    'PASSWORD': 'd6824d5e74ffe57f6ac19efc1d4e30f3d740714eeb13b78dc33337d4a4a33a51',
-    #    'HOST': 'ec2-52-200-5-135.compute-1.amazonaws.com',
-    #    'PORT': '5432',
-    #}
-    
+  
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'S3rg10r0a$2468$',
-        'HOST': 'localhost',
-        'PORT': '5433',
+        'NAME': 'd2atu5e1t2pqk9',
+        'USER': 'osopfyuhevuvaf',
+        'PASSWORD': 'f9f5b3160d1f809ef8ca11fce3059941923521fbb92a05cf08aa907a08ccaf22',
+        'HOST': 'ec2-3-208-79-113.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
