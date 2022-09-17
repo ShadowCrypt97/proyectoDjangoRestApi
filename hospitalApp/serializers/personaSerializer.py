@@ -5,3 +5,4 @@ class PersonaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Persona
         fields = ['id_persona','nombres','apellidos','genero','telefono']
+    

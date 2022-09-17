@@ -5,11 +5,11 @@ from rest_framework_simplejwt.backends import TokenBackend
 from rest_framework.permissions import IsAuthenticated
 
 from hospitalApp.models.logins import User
-from hospitalApp.serializers.userSerializer import UserSerializer
+from hospitalApp.serializers.userMedicoSerializer import UserMedicoSerializer
 
-class UserDetailView(generics.RetrieveAPIView):
+class MedicoDetailView(generics.RetrieveAPIView):
     queryset = User.objects.all()
-    serializer_class = UserSerializer
+    serializer_class = UserMedicoSerializer
     permission_classes = (IsAuthenticated,)
     
     def get(self, request, *args, **kwargs):
