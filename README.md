@@ -71,9 +71,40 @@ DATABASES = {
 * python manage.py migrate 
 
 # Despliegue en Heroku:
+* Ejecutamos el comando pip install django-heroku
 * Se debe crear un archivo llamado requirements.txt
-* Se debe hacer el comando <<pip3 freeze>> para obtener las dependencias del proyecto
-* Se copian las dependencias en el archivo requirements.txt
+* Se debe hacer el comando <<python -m pip freeze > requirements.txt>> para obtener las dependencias del proyecto y crear el archivo requirements.txt
 * Se añaden las siguientes 2 dependencias que nos permitiran el despliegue a Heroku:
     1. gunicorn==20.1.0
     2. django-heroku==0.3.1
+* Se añaden las siguientes lineas al final de settings.py
+~~~
+import django_heroku
+django_heroku.settings(locals())
+~~~
+* Se crea el archivo procfile y se añade la siguiente linea:
+~~~
+web: gunicorn authProject.wsgi
+~~~
+* luego se instala el Heroku CLI, descargandolo de la siguiente URL:
+~~~
+https://devcenter.heroku.com/articles/heroku-cli
+~~~
+* Luego se inicia sesión en Heroku desde la terminal del proyecto con el siguiente comando:
+~~~
+heroku login
+~~~
+* luego hacemos la creación del proyecto en Heroku:
+~~~
+heroku crate nameApp
+~~~
+* y cambiamos al repositorio en la nube:
+~~~
+heroku git:remote -a vast-ridge-66894
+~~~
+* y por ultimo subimos los cambios al repositorio de heroku:
+~~~
+$ git add .
+$ git commit -am "make it better"
+$ git push heroku main
+~~~
