@@ -69,3 +69,11 @@ DATABASES = {
 # Comandos para realizar la migración
 * python manage.py makemigrations hospitalApp
 * python manage.py migrate 
+
+# Despliegue en Heroku:
+* Se debe crear un archivo llamado requirements.txt
+* Se debe hacer el comando <<pip3 freeze>> para obtener las dependencias del proyecto
+* Se copian las dependencias en el archivo requirements.txt
+* Se añaden las siguientes 2 dependencias que nos permitiran el despliegue a Heroku:
+    1. gunicorn==20.1.0
+    2. django-heroku==0.3.1
