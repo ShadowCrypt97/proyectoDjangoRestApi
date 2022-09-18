@@ -1,0 +1,1 @@
+web: gunicorn syntax_hospital.wsgi
