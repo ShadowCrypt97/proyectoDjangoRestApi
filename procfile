@@ -1,1 +1,1 @@
-web: gunicorn syntax_hospital.wsgi
+web: gunicorn syntax_hospital.wsgi.application
