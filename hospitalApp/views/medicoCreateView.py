@@ -1,11 +1,11 @@
 from rest_framework import status, views
 from rest_framework.response import Response
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
-from hospitalApp.serializers.userMedicoSerializer import UserMedicoSerializer
+from hospitalApp.serializers.personaSerializer import PersonaSerializer
 
 class MedicoCreateView(views.APIView):
     def post(self, request, *args, **kwargs):
-            serializer = UserMedicoSerializer(data=request.data)
+            serializer = PersonaSerializer(data=request.data)
             serializer.is_valid(raise_exception=True)
             serializer.save()
             tokenData = {"username":request.data["username"],

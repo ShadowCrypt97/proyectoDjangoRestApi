@@ -11,7 +11,6 @@ class MedicoDetailView(generics.RetrieveAPIView):
     queryset = User.objects.all()
     serializer_class = PersonaSerializer
     permission_classes = (IsAuthenticated,)
-    
     def get(self, request, *args, **kwargs):
         token = request.META.get('HTTP_AUTHORIZATION')[7:]
         tokenBackend = TokenBackend(algorithm=settings.SIMPLE_JWT['ALGORITHM'])

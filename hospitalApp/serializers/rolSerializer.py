@@ -3,8 +3,8 @@ from hospitalApp.models.rol import Rol
 
 
 
-class UserMedicoSerializer(serializers.ModelSerializer):
+class RolSerializer(serializers.ModelSerializer):
     class Meta:
         model = Rol
-        fields = ['id_rol','nombre','descripcion']
+        fields = ['nombre','descripcion']
     

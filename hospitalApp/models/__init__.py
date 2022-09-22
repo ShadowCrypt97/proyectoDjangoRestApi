@@ -1,3 +1,3 @@
-from .logins import User
-from .personas import Persona
-from .medicos import Medico
+from .persona import User
+from .rol import Rol
+from .medico import Medico
