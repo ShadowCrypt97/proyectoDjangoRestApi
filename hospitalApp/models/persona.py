@@ -30,7 +30,7 @@ class UserManager(BaseUserManager):
     
 class User(AbstractBaseUser,PermissionsMixin):
     id = models.BigIntegerField(primary_key=True,unique=True,null=False,blank=False)
-    rol_id = models.OneToOneField(Rol,related_name='rol_id', on_delete=models.CASCADE)
+    rol_id = models.ForeignKey(Rol,related_name='rol_id',unique=False, on_delete=models.CASCADE)
     nombres = models.CharField('NOMBRES',max_length= 100,null=False,blank=False)
     apellidos = models.CharField('APELLIDOS',max_length= 100,null=False,blank=False)
     genero = models.CharField('GENERO',max_length= 50)
